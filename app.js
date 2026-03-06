@@ -54,13 +54,7 @@ function format(cmd){
 document.execCommand(cmd,false,null);
 }
 
-function insertImage(){
 
-let url=prompt("Image URL");
-
-document.execCommand("insertImage",false,url);
-
-}
 
 function updateInfo(){
 
@@ -89,7 +83,32 @@ document.body.classList.toggle("dark");
 if(pages.length===0){
 
 pages.push({
-title:"My First Page",
+title:"Myfunction uploadImage(){
+
+let input=document.createElement("input");
+
+input.type="file";
+input.accept="image/*";
+
+input.onchange=function(){
+
+let file=input.files[0];
+
+let reader=new FileReader();
+
+reader.onload=function(e){
+
+document.execCommand("insertImage",false,e.target.result);
+
+};
+
+reader.readAsDataURL(file);
+
+};
+
+input.click();
+
+  } First Page",
 content:"",
 date:""
 });
