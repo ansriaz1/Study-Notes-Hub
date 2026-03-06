@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Study Notes</title>
+<meta name="description" content="Beautiful offline study notes app">
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>📚 Study Notes</h1>
+
+<input id="search" placeholder="Search notes...">
+
+<button id="newPage">New Page</button>
+<button id="darkToggle">🌙</button>
+</header>
+
+<div class="container">
+
+<aside id="pages"></aside>
+
+<main>
+
+<div id="toolbar">
+
+<button onclick="format('bold')">B</button>
+<button onclick="format('italic')">I</button>
+<button onclick="format('underline')">U</button>
+<button onclick="format('insertUnorderedList')">• List</button>
+<button onclick="insertImage()">🖼</button>
+
+</div>
+
+<div id="editor" contenteditable="true"></div>
+
+<div class="info">
+<span id="wordCount"></span>
+<span id="lastEdit"></span>
+</div>
+
+</main>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
